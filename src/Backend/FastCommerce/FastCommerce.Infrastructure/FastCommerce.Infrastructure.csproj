@@ -10,4 +10,8 @@
     <ProjectReference Include="..\FastCommerce.Application\FastCommerce.Application.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="SqlServer\Master\" />
+  </ItemGroup>
+
 </Project>
