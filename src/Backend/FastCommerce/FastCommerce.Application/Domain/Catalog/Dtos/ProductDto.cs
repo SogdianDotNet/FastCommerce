@@ -27,15 +27,20 @@ public class ProductDto : BaseDto
     /// <summary>
     /// Products.
     /// </summary>
-    public virtual ICollection<ProductPriceDto>? Prices { get; set; }
+    public List<ProductPriceDto>? Prices { get; set; } = new();
 
     /// <summary>
     /// ProductAttributes.
     /// </summary>
-    public virtual ICollection<ProductAttributeDto>? ProductAttributes { get; set; }
+    public List<ProductAttributeDto>? ProductAttributes { get; set; } = new();
 
     /// <summary>
     /// Vendor.
     /// </summary>
-    public virtual Vendor? Vendor { get; set; }
+    public Vendor? Vendor { get; set; }
+
+    /// <summary>
+    /// Category.
+    /// </summary>
+    public CategoryDto? Category { get; set; }
 }

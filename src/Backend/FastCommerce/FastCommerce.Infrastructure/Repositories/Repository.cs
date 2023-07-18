@@ -16,6 +16,14 @@ public class Repository<TEntity> : IRepository<TEntity> where TEntity : class
         _dbContext = dbContext;
     }
 
+    public async Task<bool> AnyAsync(ISpecification<TEntity> specification, CancellationToken cancellationToken = default)
+    {
+        ArgumentNullException.ThrowIfNull(specification);
+
+        return await Filter(specification)
+            .AnyAsync(cancellationToken);
+    }
+
     public async Task<TEntity?> FindSingleAsync(ISpecification<TEntity> specification, CancellationToken cancellationToken = default)
     {
         ArgumentNullException.ThrowIfNull(specification);

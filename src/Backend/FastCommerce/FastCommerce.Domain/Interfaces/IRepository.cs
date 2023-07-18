@@ -1,9 +1,8 @@
-﻿using FastCommerce.Domain.Entities;
-
-namespace FastCommerce.Domain.Interfaces;
+﻿namespace FastCommerce.Domain.Interfaces;
 
 public interface IRepository<TEntity> where TEntity : class
 {
+    Task<bool> AnyAsync(ISpecification<TEntity> specification, CancellationToken cancellationToken = default);
     Task<TEntity?> FindSingleAsync(ISpecification<TEntity> specification, CancellationToken cancellationToken = default);
     Task<TEntity?> FindOneAsync(ISpecification<TEntity> specification, CancellationToken cancellationToken = default);
     Task<IReadOnlyCollection<TEntity>> FindAsync(ISpecification<TEntity> specification, CancellationToken cancellationToken = default);

@@ -63,6 +63,10 @@ public sealed class CategoryService : ICategoryService
     public async Task<CategoryDto> SaveAsync(CategoryDto categoryDto, CancellationToken cancellationToken = default)
     {
         ArgumentNullException.ThrowIfNull(categoryDto);
+        if (await _categoryRepository.AnyAsync(new AnyCategoryNameExist(categoryDto?.Name), cancellationToken))
+        {
+            throw new EntityAlreadyExistsException(categoryDto?.Name);
+        }
 
         var newCategory = await _categoryRepository.InsertAsync(_mapper.Map<Category>(categoryDto), cancellationToken);
 
@@ -78,11 +82,17 @@ public sealed class CategoryService : ICategoryService
             throw new ArgumentException(nameof(categoryDtoToUpdate.Id));
         }
 
-        var category = await _categoryRepository.FindSingleAsync(new CategoryById(categoryDtoToUpdate.Id), cancellationToken);
+        var category = await _categoryRepository.FindSingleAsync(new CategoryById(categoryDtoToUpdate!.Id), cancellationToken);
         EntityNotFoundException.ThrowIfNotFound(category, nameof(category));
+
+        if (await _categoryRepository.AnyAsync(new AnyCategoryNameExist(categoryDtoToUpdate?.Name, categoryDtoToUpdate!.Id), cancellationToken))
+        {
+            throw new EntityAlreadyExistsException(categoryDtoToUpdate?.Name);
+        }
 
         category!.Name = categoryDtoToUpdate.Name;
         category.Description = categoryDtoToUpdate.Description;
+        category.IsActive = categoryDtoToUpdate.IsActive;
         category.EntityStatus = categoryDtoToUpdate.EntityStatus;
 
         return _mapper.Map<CategoryDto>(await _categoryRepository.UpdateAsync(category, cancellationToken: cancellationToken));

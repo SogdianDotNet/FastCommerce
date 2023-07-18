@@ -20,5 +20,5 @@ public class CategoryDto : BaseDto
     /// <summary>
     /// Products.
     /// </summary>
-    public virtual ICollection<ProductDto>? Products { get; set; }
+    public List<ProductDto>? Products { get; set; } = new();
 }
