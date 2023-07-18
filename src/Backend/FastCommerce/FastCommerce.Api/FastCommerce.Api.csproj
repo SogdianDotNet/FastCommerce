@@ -16,10 +16,10 @@
 
   <ItemGroup>
     <Folder Include="Controllers\" />
+    <Folder Include="Consumers\" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\FastCommerce.Api.Interface\FastCommerce.Api.Interface.csproj" />
     <ProjectReference Include="..\FastCommerce.Infrastructure\FastCommerce.Infrastructure.csproj" />
   </ItemGroup>
 

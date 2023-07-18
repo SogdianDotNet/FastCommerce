@@ -3,15 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.33627.172
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FastCommerce.Api", "FastCommerce.Api\FastCommerce.Api.csproj", "{4F77FF64-D367-4567-836A-4F36124D6A2D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FastCommerce.Api", "FastCommerce.Api\FastCommerce.Api.csproj", "{4F77FF64-D367-4567-836A-4F36124D6A2D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FastCommerce.Infrastructure", "FastCommerce.Infrastructure\FastCommerce.Infrastructure.csproj", "{38511B1A-4E0B-497B-B903-A3FB14C0D66B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FastCommerce.Infrastructure", "FastCommerce.Infrastructure\FastCommerce.Infrastructure.csproj", "{38511B1A-4E0B-497B-B903-A3FB14C0D66B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FastCommerce.Application", "FastCommerce.Application\FastCommerce.Application.csproj", "{E2127D42-106C-4DA1-B889-4AE41A0EB327}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FastCommerce.Application", "FastCommerce.Application\FastCommerce.Application.csproj", "{E2127D42-106C-4DA1-B889-4AE41A0EB327}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FastCommerce.Api.Interface", "FastCommerce.Api.Interface\FastCommerce.Api.Interface.csproj", "{418970FA-8758-43A5-9BF2-0F240EE2B839}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FastCommerce.Domain", "FastCommerce.Domain\FastCommerce.Domain.csproj", "{28C530C2-9C17-4F00-A095-72B3CF4D1351}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FastCommerce.Domain", "FastCommerce.Domain\FastCommerce.Domain.csproj", "{28C530C2-9C17-4F00-A095-72B3CF4D1351}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -31,10 +29,6 @@ Global
 		{E2127D42-106C-4DA1-B889-4AE41A0EB327}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E2127D42-106C-4DA1-B889-4AE41A0EB327}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E2127D42-106C-4DA1-B889-4AE41A0EB327}.Release|Any CPU.Build.0 = Release|Any CPU
-		{418970FA-8758-43A5-9BF2-0F240EE2B839}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{418970FA-8758-43A5-9BF2-0F240EE2B839}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{418970FA-8758-43A5-9BF2-0F240EE2B839}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{418970FA-8758-43A5-9BF2-0F240EE2B839}.Release|Any CPU.Build.0 = Release|Any CPU
 		{28C530C2-9C17-4F00-A095-72B3CF4D1351}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{28C530C2-9C17-4F00-A095-72B3CF4D1351}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{28C530C2-9C17-4F00-A095-72B3CF4D1351}.Release|Any CPU.ActiveCfg = Release|Any CPU
